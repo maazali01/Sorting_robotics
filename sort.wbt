@@ -1,0 +1,87 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/conveyors/protos/ConveyorBelt.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/universal_robots/protos/UR5e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/PlasticCrate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/devices/robotiq/protos/Robotiq3fGripper.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/kuka/youbot/protos/KukaBox.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.4081251406359112 -0.0007886042665271898 -0.9129256528788249 3.145113742722991
+  position 6.189558423332003 -2.2096763897221976 8.631677723668048
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 10 10
+  floorAppearance Parquetry {
+    colorOverride 0 0 0
+  }
+}
+ConveyorBelt {
+  translation -1.19 0 0
+  size 8 0.3 0.1
+}
+UR5e {
+  translation 2.44 -0.809999 0.12
+  rotation 0 0 1 1.5708
+  controller "my_controller"
+  toolSlot [
+    DistanceSensor {
+      translation -3.3941e-07 0.08 -1.49727e-07
+      rotation 0.70710528118436 0.707108281185553 3.3905113482557537e-09 3.14159
+    }
+    Camera {
+      translation -4.92968e-13 0.12 -3.07762e-07
+      rotation -0.7071067811862364 -0.7071067811862364 9.381857096790023e-07 3.14159
+      fieldOfView 1.57
+      width 240
+      height 240
+    }
+    Robotiq3fGripper {
+    }
+  ]
+}
+PlasticCrate {
+  translation 3.31 -0.4 0
+  size 0.6 0.6 0.07
+  color 0.5 0.5 0.5
+}
+PlasticCrate {
+  translation 2.05 -1.53 0
+  name "plastic crate(1)"
+  size 0.6 0.6 0.07
+  color 0.5 0.5 0.5
+}
+PlasticCrate {
+  translation 3.32 -1.34 0
+  name "plastic crate(2)"
+  size 0.6 0.6 0.07
+  color 0.5 0.5 0.5
+}
+KukaBox {
+  translation 1.6707 0.0106278 0.147905
+  rotation -0.0001366829451701731 0.01148658471237894 -0.9999340176678748 0.023792796724507227
+  color 0 0 1
+  size 0.1 0.1 0.1
+}
+KukaBox {
+  translation -1.19 0.01 0.23
+  name "Kuka box(1)"
+  color 1 0 0
+  size 0.1 0.1 0.1
+}
+KukaBox {
+  translation -4.66 -0.01 0.26
+  name "Kuka box(2)"
+  color 0 1 0
+  size 0.1 0.1 0.1
+}
